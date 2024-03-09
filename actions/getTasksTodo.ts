@@ -1,7 +1,7 @@
 import { api } from "../api/axios";
 
-export const getTasks = async () => {
-  const res = await api.get("/tasks/all");
+export const getTasksTodo = async () => {
+  const res = await api.get("/tasks/todo");
   const data = await res.data;
 
   return data;

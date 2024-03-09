@@ -1,5 +1,8 @@
+"use client";
+
 import { createContext, useEffect, useState } from "react";
-import { getTasks } from "../actions/getTasks";
+import { getTasksTodo } from "../actions/getTasksTodo";
+import { getTasksDone } from "@/actions/getTasksDone";
 
 export interface TaskProps {
   _id: string;
@@ -9,9 +12,11 @@ export interface TaskProps {
 
 interface DataProps {
   isLoading: boolean;
-  tasks: TaskProps[];
+  tasksTodo: TaskProps[];
+  tasksDone: TaskProps[];
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  setTasks: React.Dispatch<React.SetStateAction<any>>;
+  setTasksTodo: React.Dispatch<React.SetStateAction<any>>;
+  setTasksDone: React.Dispatch<React.SetStateAction<any>>;
 }
 
 interface ProviderProps {
@@ -21,12 +26,15 @@ interface ProviderProps {
 export const MainContext = createContext({} as DataProps);
 
 export const ContextProvider = ({ children }: ProviderProps) => {
-  const [tasks, setTasks] = useState([]);
+  const [tasksTodo, setTasksTodo] = useState([]);
+  const [tasksDone, setTasksDone] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const updateTaskList = async () => {
-    const list = await getTasks();
-    setTasks(list);
+    const todo = await getTasksTodo();
+    const done = await getTasksDone();
+    setTasksTodo(todo);
+    setTasksDone(done);
     setIsLoading(false);
   };
 
@@ -37,8 +45,10 @@ export const ContextProvider = ({ children }: ProviderProps) => {
   return (
     <MainContext.Provider
       value={{
-        tasks,
-        setTasks,
+        tasksTodo,
+        tasksDone,
+        setTasksTodo,
+        setTasksDone,
         isLoading,
         setIsLoading,
       }}
