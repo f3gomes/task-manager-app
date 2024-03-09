@@ -10,7 +10,7 @@ interface TaskItemProps {
   handleUpdateTaskState: (id: string) => void;
 }
 
-export default async function TaskItem({
+export default function TaskItem({
   id,
   desc,
   done,

@@ -1,16 +1,12 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
-import { MainContext } from "@/context";
 import { createTask } from "@/actions/createTaskt";
-import { getTasksTodo } from "@/actions/getTasksTodo";
-import { getTasksDone } from "@/actions/getTasksDone";
 import { MdOutlineAddCircleOutline } from "react-icons/md";
 
 export default function TaskInput() {
   const [desc, setDesc] = useState("");
-  const { setTasksTodo, setTasksDone } = useContext(MainContext);
 
   const handleNewTask = async () => {
     if (desc === "") {
@@ -19,17 +15,11 @@ export default function TaskInput() {
       const data = { desc };
       await createTask(data);
       setDesc("");
-
-      const todo = await getTasksTodo();
-      const done = await getTasksDone();
-
-      setTasksTodo(todo);
-      setTasksDone(done);
     }
   };
 
   return (
-    <div className="flex justify-center gap-3 -mt-7">
+    <div className="flex justify-center gap-2 -mt-7">
       <input
         type="text"
         value={desc}
