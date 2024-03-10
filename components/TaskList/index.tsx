@@ -75,6 +75,7 @@ export default function TaskList() {
           desc={desc}
           setDesc={setDesc}
           handleNewTask={handleNewTask}
+          disabled={!tasksTodo || !tasksDone}
         />
         <div className="flex justify-center w-[46rem] h-[18rem] mt-12">
           <h1>Carregando...</h1>
@@ -85,7 +86,12 @@ export default function TaskList() {
 
   return (
     <div className="flex flex-col">
-      <TaskInput desc={desc} setDesc={setDesc} handleNewTask={handleNewTask} />
+      <TaskInput
+        desc={desc}
+        setDesc={setDesc}
+        handleNewTask={handleNewTask}
+        disabled={!tasksTodo || !tasksDone}
+      />
 
       <div className="flex flex-col w-[46rem] h-[18rem] mt-12 px-4">
         <div className="flex justify-between mb-2">

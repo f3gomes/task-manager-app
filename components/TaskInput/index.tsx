@@ -5,13 +5,15 @@ import { MdOutlineAddCircleOutline } from "react-icons/md";
 
 interface TaskInputProps {
   desc: string;
+  disabled: boolean;
   setDesc: (value: string) => void;
-  handleNewTask: any;
+  handleNewTask: () => void;
 }
 
 export default function TaskInput({
   desc,
   setDesc,
+  disabled,
   handleNewTask,
 }: TaskInputProps) {
   return (
@@ -25,7 +27,8 @@ export default function TaskInput({
       />
       <button
         onClick={handleNewTask}
-        className="bg-tm-blue-200 text-tm-gray-100 rounded-lg w-[90px] font-semibold text-sm flex justify-center items-center gap-1 cursor-pointer hover:bg-tm-blue-100 transition duration-300"
+        disabled={disabled}
+        className="bg-tm-blue-200 text-tm-gray-100 rounded-lg w-[90px] font-semibold text-sm flex justify-center items-center gap-1 cursor-pointer hover:bg-tm-blue-100 transition duration-300 disabled:opacity-80 disabled:cursor-not-allowed"
       >
         Criar <MdOutlineAddCircleOutline size={15} />
       </button>
