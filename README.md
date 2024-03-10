@@ -35,7 +35,7 @@ Instale as dependências
 
 Criar arquivo env na raiz e definir a seguinte variável de ambiente:
 
-```json
+```bash
 NEXT_PUBLIC_BASE_URL="http://localhost:9000"
 ```
 
