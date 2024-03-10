@@ -19,7 +19,7 @@ export default function TaskInput() {
   };
 
   return (
-    <div className="flex justify-center gap-2 -mt-7">
+    <div className="flex justify-center gap-2 px-4 -mt-7">
       <input
         type="text"
         value={desc}

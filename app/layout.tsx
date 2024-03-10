@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
+import type, { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
+
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Header } from "@/components/Header";
 import TaskInput from "@/components/TaskInput";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +25,7 @@ export default function RootLayout({
         <Header />
         <TaskInput />
         {children}
+        <Toaster />
       </body>
     </html>
   );

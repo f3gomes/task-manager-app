@@ -9,6 +9,7 @@ import { getTasksTodo } from "@/actions/getTasksTodo";
 
 import TaskItem from "../TaskItem";
 import { getTasksDone } from "@/actions/getTasksDone";
+import toast from "react-hot-toast";
 
 interface TaskProps {
   _id: string;
@@ -29,14 +30,22 @@ export default function TaskList() {
   };
 
   const handleDeleteTask = async (id: string) => {
-    await removeTask(id);
-    await handleUpdateTasks();
+    if (confirm("Excluir tarefa?")) {
+      await removeTask(id);
+      await handleUpdateTasks();
+
+      toast.success("Tarefa excluida com sucesso");
+    }
   };
 
   const handleUpdateTaskState = async (id: string, done: boolean) => {
-    const data = { done: done };
-    await updateTask(id, data);
-    await handleUpdateTasks();
+    if (confirm("Atualizar status?")) {
+      const data = { done: done };
+      await updateTask(id, data);
+      await handleUpdateTasks();
+
+      toast.success("Status da tarefa atualizado");
+    }
   };
 
   useEffect(() => {
@@ -52,7 +61,7 @@ export default function TaskList() {
   }
 
   return (
-    <div className="flex flex-col w-[46rem] h-[18rem] mt-12">
+    <div className="flex flex-col w-[46rem] h-[18rem] mt-12 px-4">
       <div className="flex justify-between mb-2">
         <div className="flex gap-2 font-medium cursor-pointer">
           <strong className="text-tm-blue-100 hover:text-tm-blue-200 transition duration-300">
