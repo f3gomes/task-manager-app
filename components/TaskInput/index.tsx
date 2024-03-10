@@ -1,23 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
-
-import { createTask } from "@/actions/createTaskt";
+import React from "react";
 import { MdOutlineAddCircleOutline } from "react-icons/md";
 
-export default function TaskInput() {
-  const [desc, setDesc] = useState("");
+interface TaskInputProps {
+  desc: string;
+  setDesc: (value: string) => void;
+  handleNewTask: any;
+}
 
-  const handleNewTask = async () => {
-    if (desc === "") {
-      alert("Digite uma descrição!");
-    } else {
-      const data = { desc };
-      await createTask(data);
-      setDesc("");
-    }
-  };
-
+export default function TaskInput({
+  desc,
+  setDesc,
+  handleNewTask,
+}: TaskInputProps) {
   return (
     <div className="flex justify-center gap-2 px-4 -mt-7">
       <input

@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task Manager APP
 
-## Getting Started
+Esta é uma aplicação React simples, desenvolvida para fins didáticos e parte do desafio técnico da empresa Sphere Cyber Solutions. A aplicação consiste em consumir a api [TaskManagerAPI] permitindo que o usuário visualize uma lista de tarefas, crie novas tarefas e também consiga editar ou excluir através da interface.
 
-First, run the development server:
+## Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/fomes/task-manager-app/master/public/prev.jpeg)
+
+## Rodando localmente
+
+Requisitos:
+
+- [Node.js >= 18](https://nodejs.org/en)
+
+Clone o projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/task-manager-app
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Entre no diretório do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd task-manager-app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
 
-## Learn More
+Instale as dependências
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  npm i
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Inicie a aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+  npm run dev
+```
 
-## Deploy on Vercel
+A API estará disponível na seguinte URL:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+http://localhost:3000/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Stack utilizada
+
+- [React](https://react.dev/)
+- [Next](https://nextjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Typescript](https://www.typescriptlang.org/)
+
+## Demonstração
+
+Disponível no link abaixo
+
+https://sphere-task-manager-app.vercel.app
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
