@@ -26,6 +26,9 @@ const config: Config = {
 
         "tm-red-200": "#e25858",
       },
+      maxWidth: {
+        "max-md": "740px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -17,13 +17,13 @@ export default function TaskInput({
   handleNewTask,
 }: TaskInputProps) {
   return (
-    <div className="flex justify-center gap-2 px-4 -mt-7">
+    <div className="flex gap-2 -mt-7">
       <input
         type="text"
         value={desc}
         placeholder="Adicione uma nova tarefa"
         onChange={(event) => setDesc(event.target.value)}
-        className="w-[28rem] h-[54px] p-4 rounded-lg bg-tm-gray-500 text-tm-gray-300 font-normal text-base"
+        className="w-[28rem] h-[54px] p-4 rounded-lg bg-tm-gray-500 text-tm-gray-300 font-normal text-base max-md:w-72"
       />
       <button
         onClick={handleNewTask}
