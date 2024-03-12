@@ -26,9 +26,9 @@ export default function TaskInput({
         className="w-[28rem] h-[54px] p-4 rounded-lg bg-tm-gray-500 text-tm-gray-300 font-normal text-base max-md:w-72"
       />
       <button
-        onClick={handleNewTask}
         disabled={disabled}
-        className="bg-tm-blue-200 text-tm-gray-100 rounded-lg w-[90px] font-semibold text-sm flex justify-center items-center gap-1 cursor-pointer hover:bg-tm-blue-100 transition duration-300 disabled:opacity-80 disabled:cursor-not-allowed"
+        onClick={handleNewTask}
+        className="bg-tm-blue-200 text-tm-gray-100 rounded-lg w-[90px] font-semibold text-sm flex justify-center items-center gap-1 cursor-pointer hover:bg-tm-blue-100 transition duration-300 disabled:opacity-80 disabled:cursor-not-allowed disabled:hover:bg-tm-blue-200"
       >
         Criar <MdOutlineAddCircleOutline size={15} />
       </button>

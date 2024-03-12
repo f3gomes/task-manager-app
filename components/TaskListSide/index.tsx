@@ -1,3 +1,4 @@
+import { cn } from "@/utils/merge";
 import TaskItem from "../TaskItem";
 import { TaskProps } from "../TaskList";
 import { RiListCheck } from "react-icons/ri";
@@ -17,8 +18,13 @@ export function TaskListSide({
 }: TaskListSideProps) {
   return (
     <div className="flex flex-col gap-1 w-1/2 max-md:w-full">
-      <div className="flex gap-2 font-medium cursor-pointer">
-        <strong className="text-tm-purple-100 hover:text-tm-purple-200 transition duration-300">
+      <div className="flex gap-2 font-medium">
+        <strong
+          className={cn(
+            "transition duration-300",
+            tasks[0]?.done ? "text-tm-purple-100" : "text-tm-blue-100"
+          )}
+        >
           {title}
         </strong>
         <strong>{tasks?.length}</strong>

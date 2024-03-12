@@ -25,18 +25,18 @@ export default function TaskItem({
         {!done ? (
           <FaRegCircle
             onClick={() => handleUpdateTaskState(id)}
-            className="text-tm-b-100 hover:text-tm-blue-200"
+            className="text-tm-b-100 hover:text-tm-blue-200 cursor-pointer transition duration-300"
           />
         ) : (
           <BsCheckCircleFill
             onClick={() => handleUpdateTaskState(id)}
-            className="text-tm-purple-200 hover:text-tm-purple-100"
+            className="text-tm-purple-200 hover:text-tm-purple-100 cursor-pointer transition duration-300"
           />
         )}
       </span>
       <p className={`${done && "line-through"}`}>{desc}</p>
       <span onClick={() => handleDeleteTask(id)}>
-        <FaTrash className="text-tm-gray-300 hover:text-tm-red-200" />
+        <FaTrash className="text-tm-gray-300 hover:text-tm-red-200 cursor-pointer transition duration-300" />
       </span>
     </div>
   );
