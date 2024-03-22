@@ -11,7 +11,6 @@ Esta é uma aplicação React simples, desenvolvida para fins didáticos e parte
 Requisitos:
 
 - [Node.js >= 18](https://nodejs.org/en)
-- [Task API](https://github.com/fomes/sphere-task-api)
 
 Clone o projeto
 
@@ -31,12 +30,6 @@ Instale as dependências
 
 ```bash
   npm i
-```
-
-Criar arquivo env na raiz e definir a seguinte variável de ambiente:
-
-```bash
-NEXT_PUBLIC_BASE_URL="http://localhost:9000"
 ```
 
 Inicie a aplicação
@@ -60,7 +53,7 @@ http://localhost:3000/
 
 Disponível no link abaixo
 
-https://sphere-task-manager-app.vercel.app
+https://task-manager-app-service.vercel.app/
 
 ## Licença
 
