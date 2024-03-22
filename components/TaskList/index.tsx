@@ -86,7 +86,7 @@ export default function TaskList() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-6">
       <div className="flex justify-center">
         <TaskInput
           desc={desc}
