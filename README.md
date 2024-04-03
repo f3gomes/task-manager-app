@@ -1,6 +1,6 @@
 # Task Manager APP
 
-Esta é uma aplicação React simples, desenvolvida para fins didáticos e parte do desafio técnico da empresa Sphere Cyber Solutions. A aplicação consiste em consumir a api [TaskManagerAPI] permitindo que o usuário visualize uma lista de tarefas, crie novas tarefas e também consiga editar ou excluir através da interface.
+Esta é uma aplicação React simples, desenvolvida para fins didáticos e parte do desafio técnico da empresa Sphere Cyber Solutions. A aplicação consiste em consumir a api [Task Manager API](https://github.com/fomes/task-manager-api) permitindo que o usuário visualize uma lista de tarefas, crie novas tarefas e também consiga editar ou excluir através da interface.
 
 ## Screenshots
 
